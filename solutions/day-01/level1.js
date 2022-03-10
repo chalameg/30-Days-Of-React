@@ -45,7 +45,14 @@ if(companies.indexOf("Apple") != -1){
 console.log("\n14. ")
 companies.forEach(company => {
     var companyAlphs = company.split('')
-    console.log(companyAlphs)
+    let oCount1 = companyAlphs.map((c)=> {
+        let oCount = 0
+        if(c.toLocaleLowerCase() == 'o'){
+            oCount+=1
+        }
+        return oCount
+    })
+    console.log(oCount1)
 });
 
 //15
@@ -60,3 +67,24 @@ console.log(companies.slice(3))
 //18
 console.log("\n18. ")
 console.log(companies.slice(0,4))
+
+//19 
+console.log("\n19. ")
+console.log(companies.slice(Math.floor(companiesLength/2), Math.floor(companiesLength/2)+1))
+
+//20
+console.log("\n20. ")
+// companies.shift()
+console.log(companies.slice(1))
+
+//21
+console.log("\n21. ")
+console.log(companies.slice(0, Math.floor(companiesLength/2)).concat(companies.slice(Math.floor(companiesLength/2)+1)))
+
+//22
+console.log("\n22. ")
+console.log(companies.slice(0, companiesLength-1))
+
+//23
+console.log("\n23. ")
+console.log(companies.splice())
